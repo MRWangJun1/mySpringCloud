@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: springbootConfig
+#  profiles:
+#    active: subversion (svn 才能使用)
+  cloud:
+    config:
+      server:
+        git:
+        #配置文件仓库地址(git)
+          uri: https://github.com/MRWangJun1/springcloudconfig.git
+          #配置文件目录
+          search-paths: /respo
+          #仓库用户名、密码
+          username: wangjun_yiyaowang@163.com
+          password: ktnnEXArcAW28z56
+#          search-paths: /**
+#          basedir: target/config
+          default-label: master
+
+server:
+  port: 6100
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5000/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 30
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: springbootService1
+  cloud:
+    config:
+      uri: http://localhost:6100/
+      profile: respo
+      label: master
+#      discovery:
+#        enabled: true
+#        service-id: springbootConfig
