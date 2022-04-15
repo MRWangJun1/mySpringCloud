@@ -16,7 +16,7 @@ spring:
           password: ktnnEXArcAW28z56
 #          search-paths: /**
 #          basedir: target/config
-          default-label: master
+          default-label: main
 
 server:
   port: 6100
